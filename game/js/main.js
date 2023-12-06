@@ -9,17 +9,40 @@ class MainScene extends Phaser.Scene
         this.load.multiatlas('player_rifle', 'res/player/player_rifle.json', 'res/player');
         this.load.multiatlas('player_feet', 'res/player/player_feet.json', 'res/player');
         this.load.image('bullet', 'res/bullet.png');
+        this.load.image('gravel', 'res/gravel.png');
+        this.load.tilemapTiledJSON('asd', 'res/map.json');
     }
-
     create ()
     {
-        this.playerFeet = this.add.sprite(100, 200, 'player_feet', 'idle/survivor-idle_0.png');
+        // map
+        const map = this.make.tilemap({key: 'asd', tileWidth: 256, tileHeight: 256})
+        const tileset = map.addTilesetImage('asd','gravel')
+        const layer = map.createLayer("Tile Layer 1", tileset, 0, 0)
+        
+        // camera
+        this.cameras.main.setBounds(0, 0, 100 * 256, 100 * 256)
+        this.physics.world.setBounds(0, 0, 100 * 256, 100 * 256)
+
+        // minimap
+        this.minimap = this.cameras.add(10, 10, 200, 200).setZoom(0.18).setName('mini')
+        this.minimap.setBounds(0, 0, 100 * 256, 100 * 256)
+        this.minimap.setBackgroundColor(0x002244);
+        this.minimap.scrollX = 200;
+        this.minimap.scrollY = 200;
+
+        this.playerFeet = this.physics.add.sprite(1000, 500, 'player_feet', 'idle/survivor-idle_0.png');
         this.playerFeet.setScale(PLAYER_SCALE, PLAYER_SCALE);
         this.playerFeet.setOrigin(0.5, 0.6);
 
-        this.player = this.add.sprite(100, 200, 'player_rifle', 'idle/survivor-idle_rifle_0.png');
+        this.player = this.physics.add.sprite(1000, 500, 'player_rifle', 'idle/survivor-idle_rifle_0.png');
         this.player.setScale(PLAYER_SCALE, PLAYER_SCALE);
         this.player.setOrigin(0.4, 0.73);
+        
+        this.player.setCollideWorldBounds(true)
+        this.playerFeet.setCollideWorldBounds(true)
+
+        this.cameras.main.startFollow(this.player)
+        this.minimap.startFollow(this.player)
 
         this.lastAnimation = ""
         this.lastFeetAnimation = ""
@@ -93,6 +116,7 @@ class MainScene extends Phaser.Scene
         });
 
         this.bulletManager = new BulletManager(this)
+        
     }
 
     update()
@@ -155,9 +179,6 @@ class MainScene extends Phaser.Scene
             this.lastFeetAnimation = currentFeetAnimation
             this.playerFeet.anims.play(currentFeetAnimation);
         }
-
-
-
 
         
         this.setPlayerAngle()
