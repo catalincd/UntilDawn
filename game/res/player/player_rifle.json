@@ -1,0 +1,1658 @@
+{
+	"textures": [
+		{
+			"image": "player_rifle.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2040,
+				"h": 1330
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "idle/survivor-idle_rifle_0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 36,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 36,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 264,
+						"y": 1,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 36,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 264,
+						"y": 1,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 527,
+						"y": 1,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 527,
+						"y": 1,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 35,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 789,
+						"y": 1,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 35,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 789,
+						"y": 1,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 35,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1052,
+						"y": 1,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 35,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1052,
+						"y": 1,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 35,
+						"w": 259,
+						"h": 155
+					},
+					"frame": {
+						"x": 1314,
+						"y": 1,
+						"w": 259,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 35,
+						"w": 259,
+						"h": 155
+					},
+					"frame": {
+						"x": 1314,
+						"y": 1,
+						"w": 259,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 34,
+						"w": 259,
+						"h": 155
+					},
+					"frame": {
+						"x": 1575,
+						"y": 1,
+						"w": 259,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 34,
+						"w": 259,
+						"h": 155
+					},
+					"frame": {
+						"x": 1575,
+						"y": 1,
+						"w": 259,
+						"h": 155
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 60,
+						"y": 31,
+						"w": 181,
+						"h": 250
+					},
+					"frame": {
+						"x": 1836,
+						"y": 1,
+						"w": 181,
+						"h": 250
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 34,
+						"w": 259,
+						"h": 155
+					},
+					"frame": {
+						"x": 1,
+						"y": 158,
+						"w": 259,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 34,
+						"w": 259,
+						"h": 155
+					},
+					"frame": {
+						"x": 1,
+						"y": 158,
+						"w": 259,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 34,
+						"w": 259,
+						"h": 155
+					},
+					"frame": {
+						"x": 262,
+						"y": 158,
+						"w": 259,
+						"h": 155
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 54,
+						"y": 117,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 523,
+						"y": 158,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 52,
+						"y": 121,
+						"w": 269,
+						"h": 155
+					},
+					"frame": {
+						"x": 786,
+						"y": 158,
+						"w": 269,
+						"h": 155
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 1057,
+						"y": 158,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 1057,
+						"y": 158,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1320,
+						"y": 158,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1320,
+						"y": 158,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 116,
+						"w": 243,
+						"h": 168
+					},
+					"frame": {
+						"x": 1582,
+						"y": 158,
+						"w": 243,
+						"h": 168
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 117,
+						"w": 212,
+						"h": 205
+					},
+					"frame": {
+						"x": 1827,
+						"y": 253,
+						"w": 212,
+						"h": 205
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1,
+						"y": 315,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1,
+						"y": 315,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 263,
+						"y": 315,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 263,
+						"y": 315,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 525,
+						"y": 315,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 525,
+						"y": 315,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 40,
+						"y": 37,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 787,
+						"y": 315,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 40,
+						"y": 37,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 1050,
+						"y": 315,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "shoot/survivor-shoot_rifle_0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 312,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 35,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 1313,
+						"y": 315,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 115,
+						"w": 226,
+						"h": 191
+					},
+					"frame": {
+						"x": 1576,
+						"y": 328,
+						"w": 226,
+						"h": 191
+					}
+				},
+				{
+					"filename": "shoot/survivor-shoot_rifle_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 312,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 35,
+						"w": 255,
+						"h": 155
+					},
+					"frame": {
+						"x": 1,
+						"y": 472,
+						"w": 255,
+						"h": 155
+					}
+				},
+				{
+					"filename": "shoot/survivor-shoot_rifle_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 312,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 35,
+						"w": 257,
+						"h": 155
+					},
+					"frame": {
+						"x": 258,
+						"y": 472,
+						"w": 257,
+						"h": 155
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 261,
+						"h": 156
+					},
+					"frame": {
+						"x": 517,
+						"y": 472,
+						"w": 261,
+						"h": 156
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 261,
+						"h": 156
+					},
+					"frame": {
+						"x": 517,
+						"y": 472,
+						"w": 261,
+						"h": 156
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 34,
+						"w": 260,
+						"h": 156
+					},
+					"frame": {
+						"x": 780,
+						"y": 472,
+						"w": 260,
+						"h": 156
+					}
+				},
+				{
+					"filename": "idle/survivor-idle_rifle_13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 207
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 34,
+						"w": 260,
+						"h": 156
+					},
+					"frame": {
+						"x": 780,
+						"y": 472,
+						"w": 260,
+						"h": 156
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 1042,
+						"y": 472,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 1042,
+						"y": 472,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 1303,
+						"y": 472,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 1303,
+						"y": 472,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 116,
+						"w": 217,
+						"h": 202
+					},
+					"frame": {
+						"x": 1804,
+						"y": 460,
+						"w": 217,
+						"h": 202
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 116,
+						"w": 215,
+						"h": 221
+					},
+					"frame": {
+						"x": 1564,
+						"y": 521,
+						"w": 215,
+						"h": 221
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 33,
+						"w": 258,
+						"h": 156
+					},
+					"frame": {
+						"x": 1,
+						"y": 629,
+						"w": 258,
+						"h": 156
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 33,
+						"w": 258,
+						"h": 156
+					},
+					"frame": {
+						"x": 1,
+						"y": 629,
+						"w": 258,
+						"h": 156
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 261,
+						"y": 630,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 261,
+						"y": 630,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 37,
+						"w": 262,
+						"h": 156
+					},
+					"frame": {
+						"x": 522,
+						"y": 630,
+						"w": 262,
+						"h": 156
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 37,
+						"w": 261,
+						"h": 156
+					},
+					"frame": {
+						"x": 786,
+						"y": 630,
+						"w": 261,
+						"h": 156
+					}
+				},
+				{
+					"filename": "move/survivor-move_rifle_10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 32,
+						"w": 258,
+						"h": 157
+					},
+					"frame": {
+						"x": 1049,
+						"y": 630,
+						"w": 258,
+						"h": 157
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 52,
+						"y": 116,
+						"w": 256,
+						"h": 160
+					},
+					"frame": {
+						"x": 1781,
+						"y": 664,
+						"w": 256,
+						"h": 160
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 56,
+						"y": 58,
+						"w": 212,
+						"h": 226
+					},
+					"frame": {
+						"x": 1309,
+						"y": 630,
+						"w": 212,
+						"h": 226
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 37,
+						"y": 37,
+						"w": 265,
+						"h": 158
+					},
+					"frame": {
+						"x": 1,
+						"y": 788,
+						"w": 265,
+						"h": 158
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 39,
+						"y": 37,
+						"w": 261,
+						"h": 158
+					},
+					"frame": {
+						"x": 268,
+						"y": 788,
+						"w": 261,
+						"h": 158
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 37,
+						"w": 261,
+						"h": 159
+					},
+					"frame": {
+						"x": 531,
+						"y": 788,
+						"w": 261,
+						"h": 159
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 38,
+						"w": 266,
+						"h": 160
+					},
+					"frame": {
+						"x": 794,
+						"y": 789,
+						"w": 266,
+						"h": 160
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 59,
+						"y": 51,
+						"w": 223,
+						"h": 231
+					},
+					"frame": {
+						"x": 1523,
+						"y": 744,
+						"w": 223,
+						"h": 231
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 37,
+						"w": 267,
+						"h": 161
+					},
+					"frame": {
+						"x": 1748,
+						"y": 826,
+						"w": 267,
+						"h": 161
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 38,
+						"w": 268,
+						"h": 161
+					},
+					"frame": {
+						"x": 1062,
+						"y": 858,
+						"w": 268,
+						"h": 161
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 38,
+						"w": 267,
+						"h": 161
+					},
+					"frame": {
+						"x": 1,
+						"y": 948,
+						"w": 267,
+						"h": 161
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 37,
+						"w": 264,
+						"h": 161
+					},
+					"frame": {
+						"x": 270,
+						"y": 949,
+						"w": 264,
+						"h": 161
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 36,
+						"w": 260,
+						"h": 161
+					},
+					"frame": {
+						"x": 536,
+						"y": 951,
+						"w": 260,
+						"h": 161
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 37,
+						"y": 36,
+						"w": 260,
+						"h": 162
+					},
+					"frame": {
+						"x": 798,
+						"y": 951,
+						"w": 260,
+						"h": 162
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 64,
+						"y": 18,
+						"w": 161,
+						"h": 258
+					},
+					"frame": {
+						"x": 1332,
+						"y": 858,
+						"w": 161,
+						"h": 258
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 38,
+						"w": 268,
+						"h": 162
+					},
+					"frame": {
+						"x": 1495,
+						"y": 989,
+						"w": 268,
+						"h": 162
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 38,
+						"w": 269,
+						"h": 162
+					},
+					"frame": {
+						"x": 1765,
+						"y": 989,
+						"w": 269,
+						"h": 162
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 38,
+						"w": 268,
+						"h": 162
+					},
+					"frame": {
+						"x": 1060,
+						"y": 1021,
+						"w": 268,
+						"h": 162
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 36,
+						"y": 36,
+						"w": 261,
+						"h": 163
+					},
+					"frame": {
+						"x": 1,
+						"y": 1111,
+						"w": 261,
+						"h": 163
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 38,
+						"w": 270,
+						"h": 163
+					},
+					"frame": {
+						"x": 264,
+						"y": 1112,
+						"w": 270,
+						"h": 163
+					}
+				},
+				{
+					"filename": "reload/survivor-reload_rifle_13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 322,
+						"h": 217
+					},
+					"spriteSourceSize": {
+						"x": 37,
+						"y": 36,
+						"w": 259,
+						"h": 163
+					},
+					"frame": {
+						"x": 536,
+						"y": 1114,
+						"w": 259,
+						"h": 163
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 51,
+						"y": 119,
+						"w": 258,
+						"h": 164
+					},
+					"frame": {
+						"x": 797,
+						"y": 1115,
+						"w": 258,
+						"h": 164
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 52,
+						"y": 125,
+						"w": 284,
+						"h": 165
+					},
+					"frame": {
+						"x": 1330,
+						"y": 1153,
+						"w": 284,
+						"h": 165
+					}
+				},
+				{
+					"filename": "meleeattack/survivor-meleeattack_rifle_7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 358,
+						"h": 353
+					},
+					"spriteSourceSize": {
+						"x": 50,
+						"y": 122,
+						"w": 268,
+						"h": 176
+					},
+					"frame": {
+						"x": 1616,
+						"y": 1153,
+						"w": 268,
+						"h": 176
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:566c9bcc86026d1e86421893f78899fe:177ca644f93a4ec8a39c1e6e0219a42d:3cd131681e68cd03537dc2191e10f6e2$"
+	}
+}

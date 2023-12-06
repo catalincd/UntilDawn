@@ -1,0 +1,21 @@
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* root?? */
+
+body {
+    margin: 0;
+    margin-top: 6rem;
+    width: 100vw;
+    height: calc(100vh - 6rem);
+    background-color: darkblue;
+}
+
+canvas {
+    display : block;   
+    margin : auto;
+}
