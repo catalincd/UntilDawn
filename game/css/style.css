@@ -9,10 +9,10 @@
 
 body {
     margin: 0;
-    margin-top: 6rem;
+    margin-top: 0rem;
     width: 100vw;
-    height: calc(100vh - 6rem);
-    background-color: darkblue;
+    height: calc(100vh - 0rem);
+    background-color: white;
 }
 
 canvas {
