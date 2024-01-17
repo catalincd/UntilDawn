@@ -22,17 +22,20 @@ class OtherPlayersManagerClass
             
             if(this.players[thisKey] == undefined)
             {
+                console.log(`unfoundkey: ${thisKey}`)
                 if(thisKey == this.id)
                 {
                     this.players[thisKey] = {id: "ORIGINAL GANGSTA"}
                     continue
                 }
-
-                let newPlayer = new Player(this.GameScene)
-                newPlayer.onCreate(false)
-
-                this.players[thisKey] = newPlayer
-                console.log(`Hello player ${thisKey}!!!!!!`)
+                else
+                {
+                    let newPlayer = new Player(this.GameScene)
+                    newPlayer.onCreate(false)
+    
+                    this.players[thisKey] = newPlayer
+                    console.log(`Hello player ${thisKey}!!!!!!`)
+                }
             }
         }
 

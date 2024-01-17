@@ -16,10 +16,13 @@ class MainScene extends Phaser.Scene
 
         this.Player = new Player(this)
         this.Controller = new Controller(this, this.Player)
+        this.Animator = new AnimatorClass(this)
         OtherPlayersManager.set(this)
+    
     }
     create ()
     {
+        this.Animator.onCreate()
         
 
         const map = this.make.tilemap({key: 'asd', tileWidth: 256, tileHeight: 256})
