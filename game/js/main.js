@@ -10,9 +10,8 @@ class MainScene extends Phaser.Scene
         this.load.multiatlas('player_feet', 'res/player/player_feet.json', 'res/player');
         this.load.image('bullet', 'res/bullet.png');
         this.load.image('gravel', 'res/gravel.png');
+        this.load.image('tree', 'res/tree.png');
         this.load.tilemapTiledJSON('asd', 'res/map.json');
-
-
 
         this.Player = new Player(this)
         this.Controller = new Controller(this, this.Player)
@@ -24,11 +23,16 @@ class MainScene extends Phaser.Scene
     {
         this.Animator.onCreate()
         
+        const map = this.make.tilemap({key: 'asd', tileWidth: 256, tileHeight: 256}, {key: 'asd2', tileWidth: 512, tileHeight: 512})
+        const tileset1 = map.addTilesetImage('asd','gravel')
+        const tileset2 = map.addTilesetImage('asd2','tree')
+        const layer1 = map.createLayer("Tile Layer 1", tileset1, 0, 0)
+        const layer2 = map.createLayer("trees", tileset2, 0, 0)
 
-        const map = this.make.tilemap({key: 'asd', tileWidth: 256, tileHeight: 256})
-        const tileset = map.addTilesetImage('asd','gravel')
-        const layer = map.createLayer("Tile Layer 1", tileset, 0, 0)
-        
+        map.getObjectLayer("trees").objects.forEach(object => {
+            const sprite = this.physics.add.sprite(object.x, object.y, "tree")
+        })
+
         //cam
         this.cameras.main.setBounds(0, 0, 100 * 256, 100 * 256)
         this.physics.world.setBounds(0, 0, 100 * 256, 100 * 256)
