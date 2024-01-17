@@ -37,7 +37,7 @@ class MainScene extends Phaser.Scene
         this.minimap.scrollX = 200;
         this.minimap.scrollY = 200;
         
-        this.Player.onCreate()
+        this.Player.onCreate(true)
         this.Controller.onCreate()
         NetStateManager.player = this.Player.player;
 

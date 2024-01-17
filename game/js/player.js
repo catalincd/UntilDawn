@@ -11,7 +11,7 @@ class Player {
 
     }
 
-    onCreate() {
+    onCreate(isMainPlayer = true) {
         const startX = 500 + Math.floor(Math.random() * 500)
         const startY = 500 + Math.floor(Math.random() * 500)
 
@@ -22,14 +22,15 @@ class Player {
         this.player = this.GameScene.physics.add.sprite(startX, startY, 'player_rifle', 'idle/survivor-idle_rifle_0.png');
         this.player.setScale(PLAYER_SCALE, PLAYER_SCALE);
         this.player.setOrigin(0.4, 0.73);
-
-        console.log(this.player)
         
         this.player.setCollideWorldBounds(true)
         this.playerFeet.setCollideWorldBounds(true)
 
-        this.GameScene.cameras.main.startFollow(this.player)
-        this.GameScene.minimap.startFollow(this.player)        
+        if(isMainPlayer)
+        {
+            this.GameScene.cameras.main.startFollow(this.player)
+            this.GameScene.minimap.startFollow(this.player)      
+        }  
 
         const idleFrames = this.GameScene.anims.generateFrameNames('player_rifle', {
             start: 0, end: 19, zeroPad: 0,

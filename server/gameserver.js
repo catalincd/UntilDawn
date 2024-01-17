@@ -11,13 +11,10 @@ const Start = (_clients, _broadcast) => {
 
     setInterval(() => {
         onUpdate()
-    }, 2000)
+    }, 5)
 }
 
 const onUpdate = () => {
-
-    // console.log(clients)
-
     broadcast(currentData)
 }
 

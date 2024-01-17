@@ -2,7 +2,7 @@ class OtherPlayersManagerClass
 {
     constructor() {
         this.GameScene = null;
-        this.players = [{id: 0}]
+        this.players = {}
         this.id = null
     }
 
@@ -11,27 +11,42 @@ class OtherPlayersManagerClass
     }
 
     update(data) {
-        console.log(data)
+        //console.log(data)
 
-        while(data.players.length > this.players.length)
+
+        let otherKeys = Object.keys(data.players)
+
+        for(var i=0;i<otherKeys.length;i++)
         {
-            let newPlayer = new Player(this.GameScene)
-            this.players.push(newPlayer)
-            console.log("NEW PLAYER")
-            console.log(newPlayer)
+            let thisKey = otherKeys[i]
+            
+            if(this.players[thisKey] == undefined)
+            {
+                if(thisKey == this.id)
+                {
+                    this.players[thisKey] = {id: "ORIGINAL GANGSTA"}
+                    continue
+                }
+
+                let newPlayer = new Player(this.GameScene)
+                newPlayer.onCreate(false)
+
+                this.players[thisKey] = newPlayer
+                console.log(`Hello player ${thisKey}!!!!!!`)
+            }
         }
-        
-        for(var i=0;i<this.players.length;i++)
+
+        for(var i=0;i<otherKeys.length;i++)
         {
             if(i == this.id)
                 continue;
 
-            console.log(this.players)
-
             this.players[i].player.x = data.players[i].x;
             this.players[i].player.y = data.players[i].y;
             this.players[i].player.angle = data.players[i].angle;
+            this.players[i].onUpdate()
         }
+
     }
 }
 

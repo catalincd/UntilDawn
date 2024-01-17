@@ -17,26 +17,21 @@ function handleConnection(client, request) {
 
 	function clientResponse(data) {
 		// broadcast(data);
-        onResponse(data)
+        onResponse(data, client)
 	}
 
 	client.on('message', clientResponse);
 	client.on('close', endClient);
 }
 
-function onResponse(data) {
+function onResponse(data, client) {
+	data.id = clients.indexOf(client)
     const parsedData = JSON.parse(data)
-	console.log("RECEIVED:")
-	console.log(parsedData)
     GameServer.LoadReceivedData(parsedData)
 }
 
 function broadcast(data) {
-    console.log("--SEND--")
-	console.log("CLIENTS LEN" + clients.length)
-    console.log(data)
 	for (c in clients) {
-		
 		clients[c].send(JSON.stringify({...data, id: c}));
 	}
 }
