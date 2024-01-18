@@ -13,7 +13,7 @@ class Controller {
         this.GameScene.input.on('pointerdown', pointer => {
             var newBullet = {
                 pos: this.playerClass.getNewBulletPos(),
-                angle: this.player.angle,
+                angle: this.player.angle
             }
 
             NetStateManager.FireBullet(newBullet)

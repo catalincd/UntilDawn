@@ -12,6 +12,7 @@ function handleConnection(client, request) {
 
 	function endClient() {
 		var position = clients.indexOf(client);
+		GameServer.DeletePlayer(position)
 		clients.splice(position, 1);
 		console.log("connection closed");
 	}

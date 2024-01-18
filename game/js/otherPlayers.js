@@ -35,6 +35,7 @@ class OtherPlayersManagerClass
                 {
                     let newPlayer = new Player(this.GameScene)
                     newPlayer.onCreate(false)
+
     
                     this.players[thisKey] = newPlayer
                     console.log(`Hello player ${thisKey}!!!!!!`)
@@ -47,17 +48,47 @@ class OtherPlayersManagerClass
             if(i == this.id)
             {
                 this.mainPlayer.player.health = data.health[i]
-                console.log(`OTHER HEALTH: ${this.mainPlayer.player.health}`)
+                this.GameScene.healthBar.set(this.mainPlayer.player.health)
+
+                if(data.dead[i] != undefined)
+                    if(data.dead[i] && !this.mainPlayer.dead)
+                    {
+                        this.mainPlayer.onDeath()
+                    }
+
                 continue;
             }
 
+            
+
+            this.players[i].nickname = data.players[i].nick;
             this.players[i].player.x = data.players[i].x;
             this.players[i].player.y = data.players[i].y;
             this.players[i].player.angle = data.players[i].angle;
+
+            if(data.dead[i] != undefined)
+                this.players[i].setVisibility(!data.dead[i])
+            
+
             this.players[i].onUpdate()
         }
 
+        let theseKeys = Object.keys(this.players)
+
+        for(var i=0;i<theseKeys.length;i++)
+        {
+            if(otherKeys.indexOf(theseKeys[i]) == -1)
+            {
+                if(this.players[theseKeys[i]] != undefined)
+                {
+                    this.players[theseKeys[i]].onDelete()
+                    delete this.players[theseKeys[i]]
+                    i--
+                }
+            }
+        }
     }
+
 }
 
 

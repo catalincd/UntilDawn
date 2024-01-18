@@ -11,12 +11,18 @@ class MainScene extends Phaser.Scene
         this.load.image('bullet', 'res/bullet.png');
         this.load.image('gravel', 'res/gravel.png');
         this.load.image('tree', 'res/tree.png');
+        this.load.image('pixel', 'res/pixel.png');
         this.load.tilemapTiledJSON('asd', 'res/map.json');
 
         this.Player = new Player(this)
+        this.Player.nickname = myNickname
         this.Controller = new Controller(this, this.Player)
         this.Animator = new AnimatorClass(this)
+
+        
+
         OtherPlayersManager.set(this, this.Player)
+        
     
     }
     create ()
@@ -48,10 +54,10 @@ class MainScene extends Phaser.Scene
         this.Animator.onCreate()
         this.Player.onCreate(true)
         this.Controller.onCreate()
+
+        this.healthBar = new HealthBar(this, 20, 20);
+
         NetStateManager.player = this.Player.player
-
-        
-
         BulletManager = new BulletManagerClass(this)
         
     }
@@ -61,6 +67,7 @@ class MainScene extends Phaser.Scene
         this.Player.onUpdate()
         this.Controller.onUpdate()
         BulletManager.update()
+        
     }
 
 }

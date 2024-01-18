@@ -1,4 +1,6 @@
 let BULLET_SPEED_FACTOR = 35
+let MAX_HEALTH = 100
+let BULLET_HIT = 20
 
 let clients;
 let broadcast;
@@ -6,9 +8,23 @@ let lastBulletId = 0
 let currentData = {
     players: {},
     bullets: {},
-    health: {}
+    health: {} ,
+    dead: {},
+    killFeed: []
 }
 
+
+const clearKillFeedEntry = () => {
+    killFeed = killFeed.slice(1)
+}
+
+const addKillFeedEntry = (killer, killed) => {
+    killFeed.push(`${killer} killed ${killed}`)
+}
+
+const DeletePlayer = (id) => {
+    delete currentData.players[id]
+}
 
 const Start = (_clients, _broadcast) => {
     clients = _clients
@@ -20,7 +36,8 @@ const Start = (_clients, _broadcast) => {
 }
 
 const NewPlayer = (id) => {
-    currentData.health[id] = 5
+    currentData.health[id] = MAX_HEALTH
+    currentData.dead[id] = false
 }
 
 const onUpdate = () => {
@@ -54,14 +71,24 @@ const checkBulletHit = (bullet) => {
     return null
 }
 
+const KillPlayer = (playerId) => {
+    currentData.dead[playerId] = true
+    currentData.health[playerId] = MAX_HEALTH
+}
+
+const RespawnPlayer = (playerId) => {
+    currentData.dead[playerId] = false
+}
+
 const UpdatePlayers = () => {
     let playerKeys = Object.keys(currentData.players)
     for(var i=0;i<playerKeys.length;i++)
     {
-        let thisPlayer = currentData.players[playerKeys[i]]
-        if(thisPlayer.health == 0)
+        if(currentData.health[playerKeys[i]] <= 0)
         {
             console.log(`DED: ${playerKeys[i]}`)
+            KillPlayer(playerKeys[i])
+            setTimeout(RespawnPlayer, 2000, playerKeys[i])
         }
     }
 }
@@ -81,8 +108,8 @@ const UpdateBullets = () => {
         targetHit = checkBulletHit(currentBullet)
         if(targetHit != null)
         {
-            currentData.health[targetHit] -= 1
-            console.log(`HIT: ${targetHit} HEALTH: ${currentData.health[targetHit]}`)
+            currentData.health[targetHit] -= BULLET_HIT
+            currentData.players[targetHit].lastHit = currentBullet.playerId
             delete currentData.bullets[bulletsKeys[i]]
             continue
         }
@@ -111,4 +138,4 @@ const LoadReceivedData = (data) => {
     FireBullets(data.firedBullets)
 }
 
-module.exports = {Start, LoadReceivedData, NewPlayer}
+module.exports = {Start, LoadReceivedData, NewPlayer, DeletePlayer}

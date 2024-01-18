@@ -6,7 +6,7 @@ class NetStateManagerClass {
     }
 
     FireBullet(bullet) {
-        this.queuedBullets.push(bullet)
+        this.queuedBullets.push({...bullet, playerId: this.id})
     }
 
     ClearTempData() {
@@ -23,8 +23,8 @@ class NetStateManagerClass {
     }
     
     GetCurrentData() {
-        const data = {id: this.id, playerData: {id: this.id, x: this.player.x, y:this.player.y, angle:this.player.angle}, firedBullets: this.queuedBullets}
-        console.log(data)
+        const data = {id: this.id, playerData: {id: this.id, nick: myNickname, x: this.player.x, y:this.player.y, angle:this.player.angle}, firedBullets: this.queuedBullets}
+        // console.log(data)
         return data
     }
 }
