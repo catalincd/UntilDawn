@@ -16,7 +16,7 @@ class MainScene extends Phaser.Scene
         this.Player = new Player(this)
         this.Controller = new Controller(this, this.Player)
         this.Animator = new AnimatorClass(this)
-        OtherPlayersManager.set(this)
+        OtherPlayersManager.set(this, this.Player)
     
     }
     create ()
@@ -47,7 +47,7 @@ class MainScene extends Phaser.Scene
         this.Animator.onCreate()
         this.Player.onCreate(true)
         this.Controller.onCreate()
-        NetStateManager.player = this.Player.player;
+        NetStateManager.player = this.Player.player
 
         
 
