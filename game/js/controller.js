@@ -11,11 +11,12 @@ class Controller {
     onCreate(){
         this.movementKeys = this.GameScene.input.keyboard.addKeys({ up: 'W', left: 'A', down: 'S', right: 'D' });
         this.GameScene.input.on('pointerdown', pointer => {
-            let newBulletPos = this.playerClass.getNewBulletPos()
-            let newBullet = this.GameScene.add.sprite(newBulletPos.x, newBulletPos.y, 'bullet')
-            newBullet.setScale(BULLET_SCALE, BULLET_SCALE)
-            newBullet.angle = this.player.angle
-            this.GameScene.bulletManager.bullets.push(newBullet)
+            var newBullet = {
+                pos: this.playerClass.getNewBulletPos(),
+                angle: this.player.angle,
+            }
+
+            NetStateManager.FireBullet(newBullet)
         });
 
         this.player = this.playerClass.player
@@ -72,6 +73,9 @@ class Controller {
             currentAnimation = "move"
             currentFeetAnimation = "runBackFeet"
         }
+
+        if(this.player.x > 2000)this.player.x = 2000;
+        if(this.player.y > 2000)this.player.y = 2000;
 
         if(this.lastAnimation != currentAnimation)
         {

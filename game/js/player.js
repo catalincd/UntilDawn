@@ -23,8 +23,7 @@ class Player {
         this.player.setScale(PLAYER_SCALE, PLAYER_SCALE);
         this.player.setOrigin(0.4, 0.73);
         
-        this.player.setCollideWorldBounds(true)
-        this.playerFeet.setCollideWorldBounds(true)
+        this.player.setCollideWorldBounds(true, 200, 200)
 
         if(isMainPlayer)
         {
@@ -47,8 +46,8 @@ class Player {
 
     getNewBulletPos() {
         const frontAngle = Phaser.Math.DegToRad(this.player.angle)
-        const deltaX = Math.cos(frontAngle) * PLAYER_SCALE * 165
-        const deltaY = Math.sin(frontAngle) * PLAYER_SCALE * 165
+        const deltaX = Math.cos(frontAngle) * PLAYER_SCALE * 150
+        const deltaY = Math.sin(frontAngle) * PLAYER_SCALE * 150
 
         return {x: this.player.x + deltaX, y: this.player.y + deltaY}
     }

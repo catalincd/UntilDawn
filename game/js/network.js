@@ -19,6 +19,7 @@ function readIncomingMessage(event) {
     NetStateManager.LoadReceivedData(JSON.parse(event.data))
 
     sendMessage(JSON.stringify(NetStateManager.GetCurrentData()))
+    NetStateManager.ClearTempData()
 }
 
 function sendMessage(data) {

@@ -10,7 +10,7 @@ class MainScene extends Phaser.Scene
         this.load.multiatlas('player_feet', 'res/player/player_feet.json', 'res/player');
         this.load.image('bullet', 'res/bullet.png');
         this.load.image('gravel', 'res/gravel.png');
-        this.load.tilemapTiledJSON('asd', 'res/map.json');
+        this.load.tilemapTiledJSON('asd', 'res/smolMap.json');
 
 
 
@@ -47,7 +47,7 @@ class MainScene extends Phaser.Scene
 
         
 
-        this.bulletManager = new BulletManager(this)
+        BulletManager = new BulletManagerClass(this)
         
     }
 
@@ -55,11 +55,9 @@ class MainScene extends Phaser.Scene
     {
         this.Player.onUpdate()
         this.Controller.onUpdate()
-        this.bulletManager.update()
+        BulletManager.update()
     }
 
-    
-    
 }
 
 

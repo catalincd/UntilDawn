@@ -1,9 +1,8 @@
-BULLET_SPEED_FACTOR = 15
 
-class BulletManager 
+class BulletManagerClass
 {
     constructor (_scene) {
-        this.bullets = []
+        this.bullets = {}
         this.scene = _scene
     }
 
@@ -11,26 +10,47 @@ class BulletManager
 
     }
 
-    update() {
-        for(var i=0;i<this.bullets.length;i++)
+    newBullet(bullet) {
+        let newBullet = this.scene.add.sprite(bullet.pos.x, bullet.pos.y, 'bullet')
+        newBullet.setScale(BULLET_SCALE, BULLET_SCALE)
+        newBullet.angle = bullet.angle
+        newBullet.id = bullet.id
+        newBullet.destroyed = false
+        this.bullets[newBullet.id] = newBullet
+    }
+
+    addAndCheckBullets(currentBullets) {
+        for(var i=0;i<Object.values(this.bullets).length;i++)
+            Object.values(this.bullets)[i].destroyed = true
+
+        for(var i=0;i<Object.values(currentBullets).length;i++)
         {
-            // is bullet out of map?
-            // in the end, when going multiplayer, bullet is server side so only the server will calculate this
-            if(!(this.scene.cameras.main.worldView.contains(this.bullets[i].x, this.bullets[i].y)))
+            let currentBullet = Object.values(currentBullets)[i]
+
+            if(this.bullets[currentBullet.id] == undefined || this.bullets[currentBullet.id] == null)
             {
-                this.bullets[i].destroy()
-                this.bullets.splice(i, 1);
-
-                i--
-                continue
+                this.newBullet(currentBullet)
             }
+            else
+            {
+                this.bullets[currentBullet.id].destroyed = false
+                this.bullets[currentBullet.id].x = currentBullet.pos.x
+                this.bullets[currentBullet.id].y = currentBullet.pos.y
+            }
+        }
+    }
 
-            const frontAngle = Phaser.Math.DegToRad(this.bullets[i].angle)
-            const deltaX = Math.cos(frontAngle) * BULLET_SPEED_FACTOR
-            const deltaY = Math.sin(frontAngle) * BULLET_SPEED_FACTOR
-
-            this.bullets[i].x += deltaX
-            this.bullets[i].y += deltaY
+    update() {
+        let bulletsKeys = Object.keys(this.bullets)
+        for(var i=0;i<bulletsKeys.length;i++)
+        {
+            let currentBullet = this.bullets[bulletsKeys[i]]
+            
+            if(currentBullet.destroyed)
+            {
+                currentBullet.destroy()
+                delete this.bullets[bulletsKeys[i]]
+            }
         }
     }
 
@@ -38,3 +58,4 @@ class BulletManager
 
 
 
+let BulletManager = null
