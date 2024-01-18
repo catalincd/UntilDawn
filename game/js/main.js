@@ -22,7 +22,7 @@ class MainScene extends Phaser.Scene
     }
     create ()
     {
-        this.Animator.onCreate()
+        
         
 
         const map = this.make.tilemap({key: 'asd', tileWidth: 256, tileHeight: 256})
@@ -40,6 +40,7 @@ class MainScene extends Phaser.Scene
         this.minimap.scrollX = 200;
         this.minimap.scrollY = 200;
         
+        this.Animator.onCreate()
         this.Player.onCreate(true)
         this.Controller.onCreate()
         NetStateManager.player = this.Player.player;

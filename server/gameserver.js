@@ -11,7 +11,7 @@ const Start = (_clients, _broadcast) => {
 
     setInterval(() => {
         onUpdate()
-    }, 5)
+    }, 15)
 }
 
 const onUpdate = () => {

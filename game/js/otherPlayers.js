@@ -11,14 +11,13 @@ class OtherPlayersManagerClass
     }
 
     update(data) {
-        //console.log(data)
-
+        // console.log(data)
 
         let otherKeys = Object.keys(data.players)
 
         for(var i=0;i<otherKeys.length;i++)
         {
-            let thisKey = otherKeys[i]
+            let thisKey = parseInt(otherKeys[i])
             
             if(this.players[thisKey] == undefined)
             {
@@ -26,6 +25,8 @@ class OtherPlayersManagerClass
                 if(thisKey == this.id)
                 {
                     this.players[thisKey] = {id: "ORIGINAL GANGSTA"}
+                    console.log("OG:")
+                    console.log(this.players)
                     continue
                 }
                 else
