@@ -37,6 +37,11 @@ class MainScene extends Phaser.Scene
         //cam
         this.cameras.main.setBounds(0, 0, 100 * 256, 100 * 256)
         this.physics.world.setBounds(0, 0, 100 * 256, 100 * 256)
+        
+        const camera = this.cameras.main;
+
+        // initial "night" setting
+        camera.postFX.addVignette(0.5, 0.5, 0.9);
 
         // minimap
         this.minimap = this.cameras.add(10, 10, 200, 200).setZoom(0.18).setName('mini')
@@ -50,9 +55,24 @@ class MainScene extends Phaser.Scene
         this.Controller.onCreate()
         NetStateManager.player = this.Player.player
 
-        
-
         BulletManager = new BulletManagerClass(this)
+
+        // static timeline for "night" so it works and looks good...
+        const timeline = this.add.timeline([
+            {at: 60000, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.9); layer1.setTint(0x999999, 0, 0, 256*100, 256*100); }},
+            {at: 65000, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.85) }},
+            {at: 70100, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.8) }},
+            {at: 75100, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.75) }},
+            {at: 80200, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.7) }},
+            {at: 130000, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.6); layer1.setTint(0x666666, 0, 0, 256*100, 256*100);}},
+            {at: 135000, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.55) }},
+            {at: 140100, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.5) }},
+            {at: 240000, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.4); layer1.setTint(0x444444, 0, 0, 256*100, 256*100);}},
+            {at: 245000, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.33) }},
+            {at: 250100, run: () => { camera.postFX.addVignette(0.5, 0.5, 0.3) }},
+        ]);
+
+        timeline.play();
         
     }
 
