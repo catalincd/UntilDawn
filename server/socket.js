@@ -7,7 +7,8 @@ var clients = new Array;
 
 function handleConnection(client, request) {
 	console.log("New Connection");       
-	clients.push(client);    
+	clients.push(client);  
+	GameServer.NewPlayer(clients.indexOf(client))  
 
 	function endClient() {
 		var position = clients.indexOf(client);

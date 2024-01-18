@@ -3,11 +3,13 @@ class OtherPlayersManagerClass
     constructor() {
         this.GameScene = null;
         this.players = {}
+        this.mainPlayer = null
         this.id = null
     }
 
-    set(_gameScene) {
+    set(_gameScene, _player) {
         this.GameScene = _gameScene;
+        this.mainPlayer = _player
     }
 
     update(data) {
@@ -43,7 +45,11 @@ class OtherPlayersManagerClass
         for(var i=0;i<otherKeys.length;i++)
         {
             if(i == this.id)
+            {
+                this.mainPlayer.player.health = data.health[i]
+                console.log(`OTHER HEALTH: ${this.mainPlayer.player.health}`)
                 continue;
+            }
 
             this.players[i].player.x = data.players[i].x;
             this.players[i].player.y = data.players[i].y;

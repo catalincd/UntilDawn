@@ -23,7 +23,9 @@ class NetStateManagerClass {
     }
     
     GetCurrentData() {
-        return {id: this.id, playerData: {id: this.id, x: this.player.x, y:this.player.y, angle:this.player.angle}, firedBullets: this.queuedBullets}
+        const data = {id: this.id, playerData: {id: this.id, x: this.player.x, y:this.player.y, angle:this.player.angle}, firedBullets: this.queuedBullets}
+        console.log(data)
+        return data
     }
 }
 

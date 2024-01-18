@@ -31,6 +31,7 @@ class Player {
             this.GameScene.minimap.startFollow(this.player)      
         }  
 
+        this.player.health = 5
         this.player.anims.play('idle');
     }
 
