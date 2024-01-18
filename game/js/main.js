@@ -31,6 +31,7 @@ class MainScene extends Phaser.Scene
 
         map.getObjectLayer("trees").objects.forEach(object => {
             const sprite = this.physics.add.sprite(object.x, object.y, "tree")
+            sprite.depth = 100
         })
 
         //cam
@@ -64,13 +65,14 @@ class MainScene extends Phaser.Scene
 
 }
 
-
-
-
 const config = {
-    type: Phaser.CANVAS,
-    width: 1280,
-    height: 720,
+    type: Phaser.AUTO,
+    scale: {
+        mode: Phaser.Scale.ENVELOP ,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: 1920,
+        height: 1080,
+    },
     scene: MainScene,
     physics: {
         default: 'arcade',
