@@ -43,6 +43,23 @@ class MainScene extends Phaser.Scene
         //cam
         this.cameras.main.setBounds(0, 0, 100 * 256, 100 * 256)
         this.physics.world.setBounds(0, 0, 100 * 256, 100 * 256)
+        
+        const camera = this.cameras.main;
+
+        // random night settings and stuff that shouldn't be here if this was a normal fucking game engine
+        var visibility = Phaser.Math.FloatBetween(0.5, 0.8);
+        var randTint = Math.floor(Phaser.Math.Between(140, 200) * visibility)
+        const colorToHex = (color) => {
+            const hexadecimal = color.toString(16);
+            return hexadecimal.length == 1 ? "0" + hexadecimal : hexadecimal;
+        }
+        const RGBtoHex = (red, green, blue) => {
+            return "0x" + colorToHex(red) + colorToHex(green) + colorToHex(blue);
+        }
+        var nightIntensity = RGBtoHex(randTint, randTint, randTint)
+        console.log(nightIntensity)
+        camera.postFX.addVignette(0.5, 0.5, visibility);
+        layer1.setTint(nightIntensity, 0, 0, 256*100, 256*100)
 
         // minimap
         this.minimap = this.cameras.add(10, 10, 200, 200).setZoom(0.18).setName('mini')
@@ -58,8 +75,8 @@ class MainScene extends Phaser.Scene
         this.healthBar = new HealthBar(this, 20, 20);
 
         NetStateManager.player = this.Player.player
+
         BulletManager = new BulletManagerClass(this)
-        
     }
 
     update()
