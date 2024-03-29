@@ -10,16 +10,18 @@ let currentData = {
     bullets: {},
     health: {} ,
     dead: {},
-    killFeed: []
+    killFeed: [],
+    kd: {}
 }
 
 
 const clearKillFeedEntry = () => {
-    killFeed = killFeed.slice(1)
+    currentData.killFeed = currentData.killFeed.slice(1)
 }
 
-const addKillFeedEntry = (killer, killed) => {
-    killFeed.push(`${killer} killed ${killed}`)
+const addKillFeedEntry = (killed, killer) => {
+    currentData.killFeed.push(`${killer} killed ${killed}`)
+    setTimeout(clearKillFeedEntry, 4000)
 }
 
 const DeletePlayer = (id) => {
@@ -38,6 +40,7 @@ const Start = (_clients, _broadcast) => {
 const NewPlayer = (id) => {
     currentData.health[id] = MAX_HEALTH
     currentData.dead[id] = false
+    currentData.kd[id] = {k: 0, d: 0}
 }
 
 const onUpdate = () => {
@@ -74,6 +77,9 @@ const checkBulletHit = (bullet) => {
 const KillPlayer = (playerId) => {
     currentData.dead[playerId] = true
     currentData.health[playerId] = MAX_HEALTH
+    addKillFeedEntry(currentData.players[playerId].nick, currentData.players[currentData.players[playerId].lastHit].nick)
+    currentData.kd[currentData.players[playerId].lastHit].k += 1
+    currentData.kd[playerId].d += 1
 }
 
 const RespawnPlayer = (playerId) => {
@@ -88,7 +94,7 @@ const UpdatePlayers = () => {
         {
             console.log(`DED: ${playerKeys[i]}`)
             KillPlayer(playerKeys[i])
-            setTimeout(RespawnPlayer, 2000, playerKeys[i])
+            setTimeout(RespawnPlayer, 100, playerKeys[i])
         }
     }
 }
@@ -123,12 +129,19 @@ const UpdateBullets = () => {
 
         // console.log(currentBullet)
     }
+
+    // console.log(Object.keys(currentData.bullets).length)
+}
+
+const DeleteBullet = (bulletId) => {
+    delete currentData.bullets[bulletId]
 }
 
 const FireBullets = (firedBullets) => {
     for(var i=0;i<firedBullets.length;i++)
     {
         currentData.bullets[lastBulletId] = {...firedBullets[i], id: lastBulletId}
+        setTimeout(DeleteBullet, 5000, lastBulletId)
         lastBulletId++
     }
 }

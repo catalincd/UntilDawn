@@ -12,8 +12,25 @@ class OtherPlayersManagerClass
         this.mainPlayer = _player
     }
 
+    getScoreText(data) {
+        let text = ""
+        let otherKeys = Object.keys(data.players)
+
+        for(var i=0;i<otherKeys.length;i++)
+        {
+            let cKey = otherKeys[i]
+            text += `${data.players[cKey].nick} ${data.kd[cKey].k} ${data.kd[cKey].d}\n`
+        }
+
+        return text
+    }
+
     update(data) {
         // console.log(data)
+
+        this.GameScene.killFeedText.setText(data.killFeed.join('\n'))
+        this.GameScene.scoreBoardText.setText(this.getScoreText(data))
+        //console.log(this.getScoreText(data))
 
         let otherKeys = Object.keys(data.players)
 
@@ -60,6 +77,8 @@ class OtherPlayersManagerClass
             }
 
             
+            if(this.players[i] == undefined)
+                continue
 
             this.players[i].nickname = data.players[i].nick;
             this.players[i].player.x = data.players[i].x;

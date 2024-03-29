@@ -3,12 +3,12 @@ class HealthBar {
     constructor (scene, x, y)
     {
 
-        this.outline = scene.add.sprite(900, 100, 'pixel');
-        this.background = scene.add.sprite(900, 100, 'pixel');
-        this.bar = scene.add.sprite(900, 100, 'pixel');
+        this.outline = scene.add.sprite(960, 100, 'pixel');
+        this.background = scene.add.sprite(960, 100, 'pixel');
+        this.bar = scene.add.sprite(960, 100, 'pixel');
 
         var style = { font: "24px Arial", fill: "#000000", align: "center"};
-        this.hpText = scene.add.text(900, 100, '100', style).setOrigin(0.5);
+        this.hpText = scene.add.text(960, 100, '100', style).setOrigin(0.5);
         this.hpText.setText('100')
 
         this.outline.tint = 0x000000
@@ -34,7 +34,7 @@ class HealthBar {
     {
         this.hpText.setText(amount)
         this.bar.setScale(39 * (amount / 100.0),3.09);
-        this.bar.x = 900 - 195 + (195 * (amount / 100.0))
+        this.bar.x = 960 - 195 + (195 * (amount / 100.0))
     }
 
     draw ()

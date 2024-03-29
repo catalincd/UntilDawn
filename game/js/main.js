@@ -1,5 +1,5 @@
 PLAYER_SCALE = 0.65
-PLAYER_SPEED_FACTOR = 1.5
+PLAYER_SPEED_FACTOR = 4
 BULLET_SCALE = 2
 
 class MainScene extends Phaser.Scene
@@ -47,7 +47,7 @@ class MainScene extends Phaser.Scene
         const camera = this.cameras.main;
 
         // random night settings and stuff that shouldn't be here if this was a normal fucking game engine
-        var visibility = Phaser.Math.FloatBetween(0.5, 0.8);
+        var visibility = Phaser.Math.FloatBetween(0.75, 0.85);
         var randTint = Math.floor(Phaser.Math.Between(140, 200) * visibility)
         const colorToHex = (color) => {
             const hexadecimal = color.toString(16);
@@ -73,6 +73,18 @@ class MainScene extends Phaser.Scene
         this.Controller.onCreate()
 
         this.healthBar = new HealthBar(this, 20, 20);
+
+
+        var style = { font: "28px Arial", fill: "#ff0000", align: "right", stroke: "#000000"};
+        var style2 = { font: "28px Arial", fill: "#ffffff", align: "left", stroke: "#000000"};
+
+        this.killFeedText = this.add.text(1720, 400, '', style).setOrigin(0.5);
+        this.killFeedText.depth = 150
+        this.killFeedText.setScrollFactor(0)
+
+        this.scoreBoardText = this.add.text(200, 400, '', style2).setOrigin(0.5);
+        this.scoreBoardText.depth = 150
+        this.scoreBoardText.setScrollFactor(0)
 
         NetStateManager.player = this.Player.player
 
